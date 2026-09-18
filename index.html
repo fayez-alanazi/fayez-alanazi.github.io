@@ -3,151 +3,159 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="د. فايز بن خلف العنزي — أستاذ مشارك، هندسة النقل والمرور، جامعة الجوف. Dr. Fayez K. Alanazi — Associate Professor, Transportation and Traffic Engineering, Jouf University.">
+<meta name="description" content="د. فايز بن خلف العنزي، أستاذ مشارك في هندسة النقل والمرور بجامعة الجوف. Dr. Fayez K. Alanazi, Associate Professor of Transportation and Traffic Engineering, Jouf University.">
 <title>Fayez Alanazi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap">
 <style>
   :root{
-    --ground:#F7F6F2;
-    --surface:#FFFFFF;
-    --ink:#15181A;
-    --muted:#666E6B;
-    --hair:#DEDCD4;
-    --accent:#14564A;
-    --accent-soft:#E4EDE9;
-    --shadow:0 1px 2px rgba(21,24,26,.05);
+    --paper:#F5F5F3;
+    --ink:#121315;
+    --accent:#1B39D8;
+    --ink-70:rgba(18,19,21,.72);
+    --ink-55:rgba(18,19,21,.56);
+    --ink-40:rgba(18,19,21,.42);
+    --hair:rgba(18,19,21,.10);
+    --hair-soft:rgba(18,19,21,.08);
+    --chip:rgba(18,19,21,.16);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --ground:#111413; --surface:#181C1B; --ink:#ECEAE4; --muted:#9AA29F;
-      --hair:#2A302E; --accent:#6FC3AE; --accent-soft:#1D2B27;
-      --shadow:0 1px 2px rgba(0,0,0,.4);
+      --paper:#101113; --ink:#F0F0EE; --accent:#8098FF;
+      --ink-70:rgba(240,240,238,.74); --ink-55:rgba(240,240,238,.56);
+      --ink-40:rgba(240,240,238,.42);
+      --hair:rgba(240,240,238,.14); --hair-soft:rgba(240,240,238,.10);
+      --chip:rgba(240,240,238,.22);
     }
   }
   :root[data-theme="dark"]{
-    --ground:#111413; --surface:#181C1B; --ink:#ECEAE4; --muted:#9AA29F;
-    --hair:#2A302E; --accent:#6FC3AE; --accent-soft:#1D2B27;
-    --shadow:0 1px 2px rgba(0,0,0,.4);
+    --paper:#101113; --ink:#F0F0EE; --accent:#8098FF;
+    --ink-70:rgba(240,240,238,.74); --ink-55:rgba(240,240,238,.56);
+    --ink-40:rgba(240,240,238,.42);
+    --hair:rgba(240,240,238,.14); --hair-soft:rgba(240,240,238,.10);
+    --chip:rgba(240,240,238,.22);
   }
 
   *{box-sizing:border-box}
   body{
-    margin:0;background:var(--ground);color:var(--ink);
-    font-family:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"IBM Plex Sans Arabic","Readex Pro",system-ui,-apple-system,sans-serif;
     font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
   }
   body:not([data-lang]){direction:rtl}
   body:not([data-lang]) .en{display:none}
   body[data-lang="ar"] .en{display:none}
   body[data-lang="en"] .ar{display:none}
-  body[data-lang="en"]{font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif}
 
-  a{color:inherit}
-  .wrap{max-width:780px;margin:0 auto;padding-inline:20px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:4px}
 
-  .topbar{
-    position:sticky;top:0;z-index:20;
-    background:color-mix(in srgb, var(--ground) 88%, transparent);
-    backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);
-  }
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-  .brand{font-weight:600;font-size:15px}
-  .brand .en{font-family:"IBM Plex Serif",Georgia,serif}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(20px,5vw,88px)}
+
+  .topbar{border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;
+    background:color-mix(in srgb, var(--paper) 90%, transparent);backdrop-filter:blur(10px)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+  .brand{font-family:"Readex Pro",sans-serif;font-size:15px;font-weight:500}
+  .topnav{display:flex;align-items:center;gap:26px}
+  .topnav a{color:var(--ink);font-size:14px}
+  .topnav a:hover{color:var(--accent)}
   .langbtn{
-    font:inherit;font-size:13px;font-weight:500;background:var(--surface);color:var(--ink);
-    border:1px solid var(--hair);border-radius:999px;padding:6px 14px;cursor:pointer;
-    font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;
+    font-family:"Readex Pro",sans-serif;font-size:13px;font-weight:500;
+    background:var(--ink);color:var(--paper);border:0;border-radius:999px;
+    padding:10px 18px;min-height:40px;cursor:pointer;
   }
-  .langbtn:hover{border-color:var(--accent);color:var(--accent)}
-  .langbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .langbtn:hover{background:var(--accent)}
+  .langbtn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  @media (max-width:760px){.topnav a{display:none}}
 
-  header.hero{padding-block:52px 40px}
-  .eyebrow{
-    font-family:"IBM Plex Mono",ui-monospace,monospace;
-    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--accent);margin:0 0 14px;
+  .hero{padding-block:clamp(48px,9vw,96px) 56px}
+  h1{
+    margin:0;font-family:"Readex Pro",sans-serif;
+    font-size:clamp(40px,8.4vw,92px);line-height:1.05;font-weight:400;
+    letter-spacing:-.02em;text-wrap:balance;
   }
-  h1{margin:0 0 6px;font-size:clamp(30px,6vw,44px);line-height:1.2;font-weight:600;text-wrap:balance}
-  body[data-lang="en"] h1{font-family:"IBM Plex Serif",Georgia,serif}
-  .rank{margin:0 0 14px;font-size:17px;font-weight:500;color:var(--accent)}
-  .role{margin:0;color:var(--muted);font-size:16.5px;max-width:60ch}
-  .affil{margin:8px 0 0;color:var(--muted);font-size:14.5px}
+  .rule{width:clamp(84px,10vw,132px);height:5px;background:var(--accent);margin:clamp(22px,3vw,36px) 0 26px}
+  .heroGrid{display:flex;flex-wrap:wrap;gap:24px 72px;align-items:flex-start}
+  .lead{margin:0;font-size:clamp(17px,2vw,21px);line-height:1.7;max-width:46ch;color:var(--ink-70)}
+  .meta{display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--ink-55);padding-top:4px}
 
-  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
-  .links a{
-    display:inline-block;text-decoration:none;font-size:13.5px;font-weight:500;
-    border:1px solid var(--hair);border-radius:6px;background:var(--surface);padding:6px 12px;
-  }
-  .links a:hover{border-color:var(--accent);color:var(--accent)}
-
-  .stats{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    border:1px solid var(--hair);border-radius:10px;background:var(--surface);
-    overflow:hidden;margin-top:28px;
-  }
-  .stats div{padding:16px 18px;border-inline-start:1px solid var(--hair)}
-  .stats div:first-child{border-inline-start:0}
-  .stats b{
-    display:block;font-size:26px;font-weight:600;line-height:1.2;
-    font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;
-  }
-  .stats span{font-size:12.5px;color:var(--muted)}
-  .statnote{font-size:12px;color:var(--muted);margin:8px 2px 0}
-
-  section{padding-block:36px;border-top:1px solid var(--hair)}
-  h2{
-    margin:0 0 20px;font-size:13px;font-weight:600;
-    font-family:"IBM Plex Mono",ui-monospace,monospace;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  }
-  p{margin:0 0 14px;max-width:68ch}
-
-  .tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
-  .tl li{display:grid;grid-template-columns:130px 1fr;gap:18px;align-items:start}
-  .tl .yr{
-    font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;
-    color:var(--muted);font-variant-numeric:tabular-nums;padding-top:4px;
-  }
-  .tl strong{display:block;font-weight:600;font-size:15.5px}
-  .tl em{display:block;font-style:normal;color:var(--muted);font-size:14px}
-
-  .tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
-  .tags li{background:var(--accent-soft);color:var(--accent);border-radius:4px;padding:5px 11px;font-size:13.5px;font-weight:500}
-
-  .plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
-  .plain li{padding-inline-start:16px;position:relative;font-size:15px}
-  .plain li::before{content:"";position:absolute;inset-inline-start:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
-  .plain em{display:block;font-style:normal;color:var(--muted);font-size:13.5px}
-
-  .pubs{list-style:none;margin:0;padding:0}
-  .pubs li{padding-block:13px;border-bottom:1px solid var(--hair)}
-  .pubs li:last-child{border-bottom:0}
-  .pubs a,.pubs .t{text-decoration:none;font-weight:500;line-height:1.55;display:inline-block}
-  .pubs a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-  .venue{
-    display:block;margin-top:4px;color:var(--muted);font-size:13px;
-    font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;
-  }
-  .more{margin-top:18px;font-size:14px}
-  .more a{color:var(--accent);font-weight:500}
-
-  .skills{display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
-  .skills div{font-size:15px}
-  .skills b{color:var(--accent);font-weight:600}
-
-  .contact{display:flex;flex-direction:column;gap:6px;font-size:15.5px}
-  .contact a{color:var(--accent);font-weight:500}
-  footer{border-top:1px solid var(--hair);padding-block:24px 40px;color:var(--muted);font-size:12.5px}
-
-  @media (max-width:520px){
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .stats div{padding:32px 0}
+  .stats div + div{border-inline-start:1px solid var(--hair);padding-inline-start:40px}
+  .stats b{display:block;font-family:"Readex Pro",sans-serif;font-size:clamp(34px,5vw,52px);
+    font-weight:300;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stats span{display:block;margin-top:10px;font-size:14px;color:var(--ink-55)}
+  @media (max-width:640px){
     .stats{grid-template-columns:1fr}
-    .stats div{border-inline-start:0;border-top:1px solid var(--hair)}
-    .stats div:first-child{border-top:0}
-    .tl li{grid-template-columns:1fr;gap:2px}
-    .tl .yr{padding-top:0}
+    .stats div{padding:20px 0;display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+    .stats div + div{border-inline-start:0;border-top:1px solid var(--hair-soft);padding-inline-start:0}
+    .stats b{font-size:32px}
+    .stats span{margin-top:0;order:-1}
   }
+
+  section{display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px;padding-block:clamp(44px,6vw,76px) 0}
+  section h2{margin:0;font-family:"Readex Pro",sans-serif;font-size:15px;font-weight:500;
+    color:var(--ink-55);letter-spacing:.02em}
+  .colhead a{display:inline-block;margin-top:12px;font-size:14px}
+  @media (max-width:860px){
+    section{grid-template-columns:1fr;gap:20px}
+  }
+
+  .prose p{margin:0 0 16px;max-width:66ch;font-size:17px;line-height:1.8;color:var(--ink-70)}
+  .prose p:last-child{margin-bottom:0}
+
+  .rows{display:flex;flex-direction:column}
+  .rows .row{display:grid;grid-template-columns:152px minmax(0,1fr);gap:32px;
+    padding-block:22px;border-bottom:1px solid var(--hair-soft)}
+  .rows .row:last-child{border-bottom:0}
+  .yr{font-size:14px;color:var(--ink-40);font-variant-numeric:tabular-nums}
+  .yr.now{color:var(--accent)}
+  .rows strong{display:block;font-family:"Readex Pro",sans-serif;font-size:19px;font-weight:500;line-height:1.5}
+  .rows em{display:block;margin-top:5px;font-style:normal;font-size:15px;color:var(--ink-55);line-height:1.6}
+  @media (max-width:640px){
+    .rows .row{grid-template-columns:1fr;gap:4px;padding-block:18px}
+    .rows strong{font-size:17px}
+  }
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+  .chips li{font-size:15px;padding:9px 18px;border:1px solid var(--chip);border-radius:999px}
+
+  .pubs{display:flex;flex-direction:column}
+  .pubs .row{display:grid;grid-template-columns:76px minmax(0,1fr);gap:28px;
+    padding-block:20px;border-bottom:1px solid var(--hair-soft);color:var(--ink)}
+  .pubs .row:last-child{border-bottom:0}
+  .pubs a.row:hover{color:var(--accent);text-decoration:none}
+  .pubs a.row:hover .t{text-decoration:underline;text-underline-offset:4px}
+  .t{display:block;font-size:18px;line-height:1.5;direction:ltr;text-align:left}
+  .venue{display:block;margin-top:5px;font-size:14px;color:var(--ink-55);
+    direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+  @media (max-width:640px){
+    .pubs .row{grid-template-columns:1fr;gap:4px}
+    .t{font-size:16px}
+  }
+
+  .plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+  .plain li{font-size:16px;line-height:1.7;color:var(--ink-70);max-width:70ch}
+
+  .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 56px}
+  .skills dt{font-family:"Readex Pro",sans-serif;font-size:17px;font-weight:500}
+  .skills dd{margin:6px 0 0;font-size:15px;color:var(--ink-55);line-height:1.65}
+  @media (max-width:640px){.skills{grid-template-columns:1fr;gap:24px}}
+
+  .band{background:var(--accent);color:#F5F5F3;margin-top:clamp(56px,8vw,96px)}
+  .band .wrap{padding-block:clamp(44px,6vw,72px);display:flex;flex-wrap:wrap;
+    align-items:flex-end;justify-content:space-between;gap:32px}
+  .band .lbl{font-size:15px;color:rgba(245,245,243,.74)}
+  .band .mail{display:inline-block;margin-top:12px;font-family:"Readex Pro",sans-serif;
+    font-size:clamp(24px,4.4vw,46px);font-weight:400;letter-spacing:-.01em;color:#F5F5F3;direction:ltr}
+  .band .profiles{display:flex;flex-wrap:wrap;gap:24px;font-size:15px;padding-bottom:10px}
+  .band .profiles a{color:#F5F5F3}
+
+  footer .wrap{padding-block:26px 44px;font-size:13px;color:var(--ink-40);
+    display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -155,50 +163,48 @@
 
 <div class="topbar">
   <div class="wrap">
-    <div class="brand">
-      <span class="ar">د. فايز بن خلف العنزي</span>
-      <span class="en">Dr. Fayez K. Alanazi</span>
-    </div>
-    <button class="langbtn" id="lang" type="button">
-      <span class="ar">English</span>
-      <span class="en">العربية</span>
-    </button>
+    <span class="brand">
+      <span class="ar">فايز بن خلف العنزي</span>
+      <span class="en">Fayez K. Alanazi</span>
+    </span>
+    <nav class="topnav">
+      <a href="#work"><span class="ar">الخبرات</span><span class="en">Experience</span></a>
+      <a href="#pubs"><span class="ar">المنشورات</span><span class="en">Publications</span></a>
+      <a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+      <button class="langbtn" id="lang" type="button">
+        <span class="ar">English</span>
+        <span class="en">العربية</span>
+      </button>
+    </nav>
   </div>
 </div>
 
 <header class="hero wrap">
-  <p class="eyebrow">
-    <span class="ar">هندسة النقل والمرور</span>
-    <span class="en">Transportation &amp; Traffic Engineering</span>
-  </p>
   <h1>
     <span class="ar">فايز بن خلف العنزي</span>
     <span class="en">Fayez Khalaf Alanazi</span>
   </h1>
-  <p class="rank">
-    <span class="ar">أستاذ مشارك — قسم الهندسة المدنية، جامعة الجوف</span>
-    <span class="en">Associate Professor — Department of Civil Engineering, Jouf University</span>
-  </p>
-  <p class="role">
-    <span class="ar">المشرف على مكتب وكيل الجامعة للشؤون التعليمية. خبرة أكاديمية وبحثية وإدارية تزيد عن عشر سنوات في أنظمة النقل الذكية (ITS)، والمركبات ذاتية القيادة والمتصلة، ونمذجة التدفق المروري، والسلامة المرورية، والنقل المستدام.</span>
-    <span class="en">Supervisor of the Office of the Vice Rector for Educational Affairs. More than ten years of academic, research and administrative experience in intelligent transportation systems (ITS), connected and automated vehicles, traffic flow modelling, road safety, and sustainable mobility.</span>
-  </p>
-  <p class="affil">
-    <span class="ar">قسم الهندسة المدنية · كلية الهندسة · جامعة الجوف · سكاكا 72351، المملكة العربية السعودية</span>
-    <span class="en">Department of Civil Engineering · College of Engineering · Jouf University · Sakaka 72351, Saudi Arabia</span>
-  </p>
+  <div class="rule"></div>
+  <div class="heroGrid">
+    <p class="lead">
+      <span class="ar">أستاذ مشارك في هندسة النقل والمرور بجامعة الجوف. أبحث في أنظمة النقل الذكية، والسلامة المرورية، ونمذجة التدفق المروري على الطرق السعودية.</span>
+      <span class="en">Associate Professor of Transportation and Traffic Engineering at Jouf University. I research intelligent transportation systems, road safety, and traffic flow modelling on Saudi roads.</span>
+    </p>
+    <div class="meta">
+      <span class="ar">قسم الهندسة المدنية، كلية الهندسة</span>
+      <span class="en">Department of Civil Engineering, College of Engineering</span>
+      <span class="ar">جامعة الجوف، سكاكا 72351، السعودية</span>
+      <span class="en">Jouf University, Sakaka 72351, Saudi Arabia</span>
+      <a href="mailto:fkalanazi@ju.edu.sa">fkalanazi@ju.edu.sa</a>
+    </div>
+  </div>
+</header>
 
-  <ul class="links">
-    <li><a href="https://scholar.google.com/citations?user=vGZQI8gAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-    <li><a href="https://www.researchgate.net/profile/Fayez-Alanazi" target="_blank" rel="noopener">ResearchGate</a></li>
-    <li><a href="https://www.linkedin.com/in/fayez-alanazi-b42775157/" target="_blank" rel="noopener">LinkedIn</a></li>
-    <li><a href="mailto:fkalanazi@ju.edu.sa"><span class="ar">البريد الإلكتروني</span><span class="en">Email</span></a></li>
-  </ul>
-
+<div class="wrap">
   <div class="stats">
     <div>
       <b>35+</b>
-      <span class="ar">بحثاً محكّماً</span><span class="en">Peer-reviewed papers</span>
+      <span class="ar">بحثاً في مجلات محكّمة</span><span class="en">Peer-reviewed papers</span>
     </div>
     <div>
       <b>8</b>
@@ -206,359 +212,406 @@
     </div>
     <div>
       <b>2,095</b>
-      <span class="ar">استشهاداً</span><span class="en">Citations</span>
+      <span class="ar">استشهاداً بحسب ResearchGate</span><span class="en">Citations per ResearchGate</span>
     </div>
   </div>
-  <p class="statnote">
-    <span class="ar">عدد الاستشهادات بحسب ملف ResearchGate — يُحدَّث يدوياً.</span>
-    <span class="en">Citation count as reported on ResearchGate — updated manually.</span>
-  </p>
-</header>
+</div>
 
 <main class="wrap">
 
   <section>
     <h2><span class="ar">الملخص المهني</span><span class="en">Profile</span></h2>
-    <p>
-      <span class="ar">أستاذ مشارك بقسم الهندسة المدنية في جامعة الجوف، متخصص في هندسة النقل والمرور. تتركز خبرتي في أنظمة النقل الذكية، والمركبات ذاتية القيادة والمتصلة، ونمذجة التدفق المروري، والسلامة المرورية، والنقل المستدام، والبنية التحتية للمركبات الكهربائية.</span>
-      <span class="en">Associate Professor of Civil Engineering at Jouf University, specialising in transportation and traffic engineering. My expertise spans intelligent transportation systems, connected and automated vehicles, traffic flow modelling, road safety, sustainable mobility, and electric-vehicle infrastructure.</span>
-    </p>
-    <p>
-      <span class="ar">حصلت على الدكتوراه من جامعة أكرون بالولايات المتحدة عام 2021م. أشغل حالياً منصب المشرف على مكتب وكيل الجامعة للشؤون التعليمية، وسبق أن شغلت منصب وكيل عمادة القبول والتسجيل لشؤون القبول (2024–2026م)، حيث أقود الملفات الأكاديمية الاستراتيجية وتطوير السياسات والإجراءات وتعزيز الحوكمة المؤسسية بما يتوافق مع مستهدفات رؤية المملكة 2030.</span>
-      <span class="en">I earned my PhD from the University of Akron, USA, in 2021. I currently serve as Supervisor of the Office of the Vice Rector for Educational Affairs, and previously served as Vice Dean of Admission and Registration for Admission Affairs (2024–2026), leading strategic academic portfolios, policy and process development, and institutional governance aligned with Saudi Vision 2030.</span>
-    </p>
-    <p>
-      <span class="ar">لي أكثر من 35 بحثاً علمياً منشوراً في مجلات دولية محكّمة، وعدة مشاريع بحثية ممولة من وزارة التعليم وجامعة الجوف، وأعمل مستشاراً ومحكّماً في مجال السيارات الذكية لدى الهيئة السعودية للمواصفات والمقاييس والجودة (ساسو).</span>
-      <span class="en">I have published more than 35 papers in international peer-reviewed journals, led several research projects funded by the Ministry of Education and Jouf University, and serve as a consultant and reviewer in smart vehicles for the Saudi Standards, Metrology and Quality Organization (SASO).</span>
-    </p>
+    <div class="prose">
+      <p>
+        <span class="ar">أستاذ مشارك بقسم الهندسة المدنية في جامعة الجوف، متخصص في هندسة النقل والمرور. تتركز خبرتي في أنظمة النقل الذكية، والمركبات ذاتية القيادة والمتصلة، ونمذجة التدفق المروري، والسلامة المرورية، والنقل المستدام، والبنية التحتية للمركبات الكهربائية.</span>
+        <span class="en">Associate Professor of Civil Engineering at Jouf University, specialising in transportation and traffic engineering. My expertise spans intelligent transportation systems, connected and automated vehicles, traffic flow modelling, road safety, sustainable mobility, and electric-vehicle infrastructure.</span>
+      </p>
+      <p>
+        <span class="ar">حصلت على الدكتوراه من جامعة أكرون بالولايات المتحدة عام 2021م. أشغل حالياً منصب المشرف على مكتب وكيل الجامعة للشؤون التعليمية، وسبق أن شغلت منصب وكيل عمادة القبول والتسجيل لشؤون القبول (2024 إلى 2026م)، حيث أقود الملفات الأكاديمية الاستراتيجية وتطوير السياسات والإجراءات وتعزيز الحوكمة المؤسسية بما يتوافق مع مستهدفات رؤية المملكة 2030.</span>
+        <span class="en">I earned my PhD from the University of Akron, USA, in 2021. I currently serve as Supervisor of the Office of the Vice Rector for Educational Affairs, and previously served as Vice Dean of Admission and Registration for Admission Affairs (2024 to 2026), leading strategic academic portfolios, policy and process development, and institutional governance aligned with Saudi Vision 2030.</span>
+      </p>
+      <p>
+        <span class="ar">لي أكثر من 35 بحثاً منشوراً في مجلات دولية محكّمة، وعدة مشاريع بحثية ممولة من وزارة التعليم وجامعة الجوف، وأعمل مستشاراً ومحكّماً في مجال السيارات الذكية لدى الهيئة السعودية للمواصفات والمقاييس والجودة (ساسو).</span>
+        <span class="en">I have published more than 35 papers in international peer-reviewed journals, led several research projects funded by the Ministry of Education and Jouf University, and serve as a consultant and reviewer in smart vehicles for the Saudi Standards, Metrology and Quality Organization (SASO).</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2><span class="ar">المنصب والخبرة</span><span class="en">Position &amp; Experience</span></h2>
+    <div class="rows">
+      <div class="row">
+        <span class="yr now"><span class="ar">2024 حتى الآن</span><span class="en">2024 to present</span></span>
+        <div>
+          <strong><span class="ar">المشرف على مكتب وكيل الجامعة للشؤون التعليمية</span><span class="en">Supervisor, Office of the Vice Rector for Educational Affairs</span></strong>
+          <em><span class="ar">إدارة الملفات الأكاديمية الاستراتيجية وتعزيز الحوكمة المؤسسية</span><span class="en">Strategic academic portfolios and institutional governance</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr"><span class="ar">2026 حتى الآن</span><span class="en">2026 to present</span></span>
+        <div>
+          <strong><span class="ar">أستاذ مشارك، قسم الهندسة المدنية</span><span class="en">Associate Professor, Civil Engineering</span></strong>
+          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2024 - 2026</span>
+        <div>
+          <strong><span class="ar">وكيل عمادة القبول والتسجيل لشؤون القبول</span><span class="en">Vice Dean of Admission and Registration for Admission Affairs</span></strong>
+          <em><span class="ar">قيادة استراتيجية القبول، وتطوير السياسات والإجراءات، والتنسيق بين الكليات</span><span class="en">Admission strategy, policy and process development, inter-college coordination</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2022 - 2026</span>
+        <div>
+          <strong><span class="ar">أستاذ مساعد، قسم الهندسة المدنية</span><span class="en">Assistant Professor, Civil Engineering</span></strong>
+          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2017 - 2022</span>
+        <div>
+          <strong><span class="ar">محاضر، قسم الهندسة المدنية</span><span class="en">Lecturer, Civil Engineering</span></strong>
+          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2013 - 2014</span>
+        <div>
+          <strong><span class="ar">مهندس موقع</span><span class="en">Site Engineer</span></strong>
+          <em><span class="ar">الشركة السعودية للكهرباء، القريات، منطقة الجوف</span><span class="en">Saudi Electricity Company, Qurayyat, Al-Jouf Region</span></em>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2><span class="ar">المؤهلات الأكاديمية</span><span class="en">Education</span></h2>
-    <ul class="tl">
-      <li>
+    <div class="rows">
+      <div class="row">
         <span class="yr">2021</span>
         <div>
-          <strong><span class="ar">الدكتوراه في الهندسة المدنية — هندسة النقل والمرور</span><span class="en">PhD in Civil Engineering — Transportation &amp; Traffic Engineering</span></strong>
+          <strong><span class="ar">الدكتوراه في الهندسة المدنية، هندسة النقل والمرور</span><span class="en">PhD in Civil Engineering, Transportation &amp; Traffic Engineering</span></strong>
           <em><span class="ar">جامعة أكرون، أوهايو، الولايات المتحدة الأمريكية</span><span class="en">University of Akron, Ohio, USA</span></em>
         </div>
-      </li>
-      <li>
+      </div>
+      <div class="row">
         <span class="yr">2017</span>
         <div>
-          <strong><span class="ar">الماجستير في الهندسة المدنية — هندسة النقل والمرور</span><span class="en">MSc in Civil Engineering — Transportation &amp; Traffic Engineering</span></strong>
+          <strong><span class="ar">الماجستير في الهندسة المدنية، هندسة النقل والمرور</span><span class="en">MSc in Civil Engineering, Transportation &amp; Traffic Engineering</span></strong>
           <em><span class="ar">جامعة دايتون، أوهايو، الولايات المتحدة الأمريكية</span><span class="en">University of Dayton, Ohio, USA</span></em>
         </div>
-      </li>
-      <li>
+      </div>
+      <div class="row">
         <span class="yr">2013</span>
         <div>
           <strong><span class="ar">البكالوريوس في الهندسة المدنية</span><span class="en">BSc in Civil Engineering</span></strong>
           <em><span class="ar">جامعة الجوف، سكاكا، المملكة العربية السعودية</span><span class="en">Jouf University, Sakaka, Saudi Arabia</span></em>
         </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2><span class="ar">الخبرات الأكاديمية والمهنية</span><span class="en">Academic &amp; Professional Experience</span></h2>
-    <ul class="tl">
-      <li>
-        <span class="yr"><span class="ar">2026 — حتى الآن</span><span class="en">2026 — present</span></span>
-        <div>
-          <strong><span class="ar">أستاذ مشارك — قسم الهندسة المدنية</span><span class="en">Associate Professor — Civil Engineering</span></strong>
-          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
-        </div>
-      </li>
-      <li>
-        <span class="yr">2022 — 2026</span>
-        <div>
-          <strong><span class="ar">أستاذ مساعد — قسم الهندسة المدنية</span><span class="en">Assistant Professor — Civil Engineering</span></strong>
-          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
-        </div>
-      </li>
-      <li>
-        <span class="yr">2017 — 2022</span>
-        <div>
-          <strong><span class="ar">محاضر — قسم الهندسة المدنية</span><span class="en">Lecturer — Civil Engineering</span></strong>
-          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
-        </div>
-      </li>
-      <li>
-        <span class="yr">2014 — 2017</span>
-        <div>
-          <strong><span class="ar">معيد — قسم الهندسة المدنية</span><span class="en">Teaching Assistant — Civil Engineering</span></strong>
-          <em><span class="ar">جامعة الجوف، سكاكا</span><span class="en">Jouf University, Sakaka</span></em>
-        </div>
-      </li>
-      <li>
-        <span class="yr">2013 — 2014</span>
-        <div>
-          <strong><span class="ar">مهندس موقع</span><span class="en">Site Engineer</span></strong>
-          <em><span class="ar">الشركة السعودية للكهرباء — القريات، منطقة الجوف</span><span class="en">Saudi Electricity Company — Qurayyat, Al-Jouf Region</span></em>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="ar">القيادة الأكاديمية والخبرات الإدارية</span><span class="en">Academic Leadership &amp; Administration</span></h2>
-    <ul class="tl">
-      
-      <li>
-        <span class="yr"><span class="ar">2024 — حتى الآن</span><span class="en">2024 — present</span></span>
-        <div>
-          <strong><span class="ar">المشرف على مكتب وكيل الجامعة للشؤون التعليمية</span><span class="en">Supervisor, Office of the Vice Rector for Educational Affairs</span></strong>
-          <em><span class="ar">إدارة الملفات الأكاديمية الاستراتيجية وتعزيز الحوكمة المؤسسية</span><span class="en">Strategic academic portfolios and institutional governance</span></em>
-        </div>
-      </li>
-      <li>
-        <span class="yr">2024 — 2026</span>
-        <div>
-          <strong><span class="ar">وكيل عمادة القبول والتسجيل لشؤون القبول</span><span class="en">Vice Dean of Admission and Registration for Admission Affairs</span></strong>
-          <em><span class="ar">قيادة استراتيجية القبول، وتطوير السياسات والإجراءات، والتنسيق بين الكليات</span><span class="en">Admission strategy, policy and process development, inter-college coordination</span></em>
-        </div>
-      </li>
-      
-      <li>
+    <h2><span class="ar">القيادة الأكاديمية</span><span class="en">Academic Leadership</span></h2>
+    <div class="rows">
+      <div class="row">
         <span class="yr">2026</span>
         <div>
-          <strong><span class="ar">رئيس اللجنة التنفيذية للتصنيف السعودي العالي للجامعات (صُقر) — الدورة الثانية</span><span class="en">Chair, Executive Committee for the Saudi Higher Education Ranking (Saqr) — 2nd cycle</span></strong>
+          <strong><span class="ar">رئيس اللجنة التنفيذية للتصنيف السعودي العالي للجامعات (صُقر)، الدورة الثانية</span><span class="en">Chair, Executive Committee for the Saudi Higher Education Ranking (Saqr), 2nd cycle</span></strong>
           <em><span class="ar">قيادة الإعداد المؤسسي، وجودة البيانات، وتحليل مؤشرات التصنيف الوطني</span><span class="en">Institutional preparation, data quality, and national ranking indicator analysis</span></em>
         </div>
-      </li>
-      <li>
-        <span class="yr"><span class="ar">2026 — حتى الآن</span><span class="en">2026 — present</span></span>
+      </div>
+      <div class="row">
+        <span class="yr now"><span class="ar">2026 حتى الآن</span><span class="en">2026 to present</span></span>
         <div>
-          <strong><span class="ar">رئيس لجنة المركز الوطني للقياس (قياس) — مقر جامعة الجوف</span><span class="en">Chair, National Measurement Center (Qiyas) Committee — Jouf University site</span></strong>
+          <strong><span class="ar">رئيس لجنة المركز الوطني للقياس (قياس)، مقر جامعة الجوف</span><span class="en">Chair, National Measurement Center (Qiyas) Committee, Jouf University site</span></strong>
           <em><span class="ar">إدارة عمليات الاختبارات الوطنية المعيارية</span><span class="en">Managing national standardised testing operations</span></em>
         </div>
-      </li>
-      <li>
-        <span class="yr"><span class="ar">2025 — حتى الآن</span><span class="en">2025 — present</span></span>
+      </div>
+      <div class="row">
+        <span class="yr now"><span class="ar">2025 حتى الآن</span><span class="en">2025 to present</span></span>
         <div>
           <strong><span class="ar">مستشار ومحكّم في مجال السيارات الذكية</span><span class="en">Consultant and reviewer, smart vehicles</span></strong>
           <em><span class="ar">الهيئة السعودية للمواصفات والمقاييس والجودة (ساسو)</span><span class="en">Saudi Standards, Metrology and Quality Organization (SASO)</span></em>
         </div>
-      </li>
-      <li>
+      </div>
+      <div class="row">
         <span class="yr">2024</span>
         <div>
-          <strong><span class="ar">رئيس وحدة التعلم الإلكتروني — على مستوى الجامعة</span><span class="en">Head, E-Learning Unit — university level</span></strong>
+          <strong><span class="ar">رئيس وحدة التعلم الإلكتروني على مستوى الجامعة</span><span class="en">Head, University E-Learning Unit</span></strong>
           <em><span class="ar">تأسيس وحدة جديدة تتبع وكيل الجامعة للشؤون التعليمية</span><span class="en">Founding a new unit under the Vice Rectorate for Educational Affairs</span></em>
         </div>
-      </li>
-      <li>
-        <span class="yr">2023 — 2025</span>
+      </div>
+      <div class="row">
+        <span class="yr">2023 - 2025</span>
         <div>
           <strong><span class="ar">عضو اللجان الدائمة للشؤون الأكاديمية والمناهج والخطط</span><span class="en">Member, standing committees for academic affairs, curricula and study plans</span></strong>
-          <em><span class="ar">جامعة الجوف — إضافة إلى عضوية مركز الأبحاث والابتكار العلمية والهندسية</span><span class="en">Jouf University — and member of the Scientific and Engineering Research and Innovation Center</span></em>
+          <em><span class="ar">جامعة الجوف، وعضو مركز الأبحاث والابتكار العلمية والهندسية</span><span class="en">Jouf University, and member of the Scientific and Engineering Research and Innovation Center</span></em>
         </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2><span class="ar">الاهتمامات البحثية</span><span class="en">Research Interests</span></h2>
-    <ul class="tags">
-      <li><span class="ar">أنظمة النقل الذكية والمركبات ذاتية القيادة</span><span class="en">ITS &amp; automated vehicles</span></li>
+    <h2><span class="ar">مجالات البحث</span><span class="en">Research Areas</span></h2>
+    <ul class="chips">
+      <li><span class="ar">أنظمة النقل الذكية</span><span class="en">Intelligent transportation systems</span></li>
+      <li><span class="ar">المركبات ذاتية القيادة والمتصلة</span><span class="en">Automated &amp; connected vehicles</span></li>
       <li><span class="ar">نمذجة التدفق المروري والمحاكاة</span><span class="en">Traffic flow modelling &amp; simulation</span></li>
       <li><span class="ar">تحليلات السلامة المرورية</span><span class="en">Road safety analytics</span></li>
       <li><span class="ar">التعلم المعزز العميق والاتحادي</span><span class="en">Deep &amp; federated reinforcement learning</span></li>
-      <li><span class="ar">المركبات الكهربائية والبنية التحتية للشحن</span><span class="en">EVs &amp; charging infrastructure</span></li>
+      <li><span class="ar">المركبات الكهربائية وبنية الشحن</span><span class="en">EVs &amp; charging infrastructure</span></li>
       <li><span class="ar">النقل الحضري المستدام</span><span class="en">Sustainable urban mobility</span></li>
       <li><span class="ar">سياسات النقل ضمن رؤية 2030</span><span class="en">Transport policy under Vision 2030</span></li>
     </ul>
   </section>
 
   <section>
-    <h2><span class="ar">المشاريع البحثية الممولة</span><span class="en">Funded Research Projects</span></h2>
-    <ul class="plain">
-      <li>
-        <span class="ar">تطوير مراكز التنقل الذكية في المدن السعودية</span>
-        <span class="en">Developing smart mobility hubs in Saudi cities</span>
-        <em><span class="ar">عمادة البحث العلمي، جامعة الجوف — 2025م</span><span class="en">Deanship of Scientific Research, Jouf University — 2025</span></em>
-      </li>
-      <li>
-        <span class="ar">تحليل العوامل المؤثرة في خطورة الحوادث باستخدام التعلم المعزز</span>
-        <span class="en">Analysing crash severity factors using reinforcement learning</span>
-        <em><span class="ar">عمادة البحث العلمي، جامعة الجوف — منحة DGSSR-2025-02-01231</span><span class="en">Deanship of Scientific Research, Jouf University — grant DGSSR-2025-02-01231</span></em>
-      </li>
-      <li>
-        <span class="ar">التنبؤ بشدة الحوادث المرورية في المملكة باستخدام نماذج تعلم الآلة</span>
-        <span class="en">Predicting traffic crash severity in Saudi Arabia with machine learning</span>
-        <em><span class="ar">الهيئة السعودية للمواصفات والمقاييس والجودة (ساسو) — 2024م</span><span class="en">SASO — 2024</span></em>
-      </li>
-      <li>
-        <span class="ar">حلول ذكية للتنقل المستدام باستخدام تقنيات إنترنت الأشياء</span>
-        <span class="en">Smart solutions for sustainable mobility using IoT</span>
-        <em><span class="ar">عمادة البحث العلمي، جامعة الجوف — 2024م</span><span class="en">Deanship of Scientific Research, Jouf University — 2024</span></em>
-      </li>
-      <li>
-        <span class="ar">تعزيز التنبؤ بسلامة الطرق: نهج قائم على البيانات للتنمية المستدامة</span>
-        <span class="en">Data-driven road safety prediction for sustainable development</span>
-        <em><span class="ar">عمادة البحث العلمي، جامعة الجوف — 2024م</span><span class="en">Deanship of Scientific Research, Jouf University — 2024</span></em>
-      </li>
-      <li>
-        <span class="ar">دور المركبات الكهربائية والطاقة المتجددة في المدن الذكية</span>
-        <span class="en">The role of EVs and renewable energy in smart cities</span>
-        <em><span class="ar">وزارة التعليم — المملكة العربية السعودية، 2023م</span><span class="en">Ministry of Education, Saudi Arabia — 2023</span></em>
-      </li>
-      <li>
-        <span class="ar">حلول لتنقل أفضل: تحليل تطبيقات أنظمة النقل الذكية في دول الشرق الأوسط</span>
-        <span class="en">Analysing ITS applications across Middle Eastern countries</span>
-        <em><span class="ar">عمادة البحث العلمي، جامعة الجوف — 2023م</span><span class="en">Deanship of Scientific Research, Jouf University — 2023</span></em>
-      </li>
-      <li>
-        <span class="ar">تطوير مؤشرات الأداء المروري والسلامة في الدوارات الحضرية</span>
-        <span class="en">Traffic performance and safety measures for urban roundabouts</span>
-        <em><span class="ar">عمادة البحث العلمي، جامعة الجوف — باحث رئيس، 2022م</span><span class="en">Deanship of Scientific Research, Jouf University — Principal Investigator, 2022</span></em>
-      </li>
-    </ul>
+    <h2><span class="ar">المشاريع الممولة</span><span class="en">Funded Projects</span></h2>
+    <div class="rows">
+      <div class="row">
+        <span class="yr">2025</span>
+        <div>
+          <strong><span class="ar">تطوير مراكز التنقل الذكية في المدن السعودية</span><span class="en">Developing smart mobility hubs in Saudi cities</span></strong>
+          <em><span class="ar">عمادة البحث العلمي، جامعة الجوف</span><span class="en">Deanship of Scientific Research, Jouf University</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2025</span>
+        <div>
+          <strong><span class="ar">تحليل العوامل المؤثرة في خطورة الحوادث باستخدام التعلم المعزز</span><span class="en">Analysing crash severity factors using reinforcement learning</span></strong>
+          <em><span class="ar">عمادة البحث العلمي، جامعة الجوف، منحة DGSSR-2025-02-01231</span><span class="en">Deanship of Scientific Research, Jouf University, grant DGSSR-2025-02-01231</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2024</span>
+        <div>
+          <strong><span class="ar">التنبؤ بشدة الحوادث المرورية في المملكة باستخدام تعلم الآلة</span><span class="en">Predicting traffic crash severity in Saudi Arabia with machine learning</span></strong>
+          <em><span class="ar">الهيئة السعودية للمواصفات والمقاييس والجودة (ساسو)</span><span class="en">Saudi Standards, Metrology and Quality Organization (SASO)</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2024</span>
+        <div>
+          <strong><span class="ar">حلول ذكية للتنقل المستدام باستخدام إنترنت الأشياء</span><span class="en">Smart solutions for sustainable mobility using IoT</span></strong>
+          <em><span class="ar">عمادة البحث العلمي، جامعة الجوف</span><span class="en">Deanship of Scientific Research, Jouf University</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2024</span>
+        <div>
+          <strong><span class="ar">تعزيز التنبؤ بسلامة الطرق، نهج قائم على البيانات للتنمية المستدامة</span><span class="en">Data-driven road safety prediction for sustainable development</span></strong>
+          <em><span class="ar">عمادة البحث العلمي، جامعة الجوف</span><span class="en">Deanship of Scientific Research, Jouf University</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2023</span>
+        <div>
+          <strong><span class="ar">دور المركبات الكهربائية والطاقة المتجددة في المدن الذكية</span><span class="en">The role of EVs and renewable energy in smart cities</span></strong>
+          <em><span class="ar">وزارة التعليم، المملكة العربية السعودية</span><span class="en">Ministry of Education, Saudi Arabia</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2023</span>
+        <div>
+          <strong><span class="ar">تحليل تطبيقات أنظمة النقل الذكية في دول الشرق الأوسط</span><span class="en">Analysing ITS applications across Middle Eastern countries</span></strong>
+          <em><span class="ar">عمادة البحث العلمي، جامعة الجوف</span><span class="en">Deanship of Scientific Research, Jouf University</span></em>
+        </div>
+      </div>
+      <div class="row">
+        <span class="yr">2022</span>
+        <div>
+          <strong><span class="ar">تطوير مؤشرات الأداء المروري والسلامة في الدوارات الحضرية</span><span class="en">Traffic performance and safety measures for urban roundabouts</span></strong>
+          <em><span class="ar">عمادة البحث العلمي، جامعة الجوف، باحث رئيس</span><span class="en">Deanship of Scientific Research, Jouf University, Principal Investigator</span></em>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2><span class="ar">مختارات من المنشورات</span><span class="en">Selected Publications</span></h2>
-    <ul class="pubs">
-      <li>
-        <a href="https://doi.org/10.1371/journal.pone.0339207" target="_blank" rel="noopener">Adaptive traffic signal control using deep reinforcement learning: toward smarter and safer urban mobility</a>
-        <span class="venue">PLOS ONE, 21(3), e0339207 · 2026</span>
-      </li>
-      <li>
-        <a href="https://doi.org/10.3390/su17209210" target="_blank" rel="noopener">MRI-Copula: a hybrid copula–machine learning framework for multivariate risk indexing in urban traffic safety</a>
-        <span class="venue">Sustainability, 17(20), 9210 · 2025</span>
-      </li>
-      <li>
-        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12443991/" target="_blank" rel="noopener">Comparative evaluation of deep learning and traditional models for predicting traffic accident severity in Saudi Arabia</a>
-        <span class="venue">Scientific Reports, 15, 32568 · 2025</span>
-      </li>
-      <li>
-        <span class="t">Deep learning-based predictive models for real-time accident prevention in autonomous vehicle networks</span>
-        <span class="venue">Scientific Reports, 15, 20844 · 2025</span>
-      </li>
-      <li>
-        <span class="t">AI on the road — a review of technologies enhancing urban traffic safety and efficiency</span>
-        <span class="venue">Promet – Traffic &amp; Transportation, 37(5), 1179–1203 · 2025</span>
-      </li>
-      <li>
-        <a href="https://doi.org/10.3141/03611981251337460" target="_blank" rel="noopener">Predicting traffic crash severity in Jeddah using machine learning techniques: a data-driven approach to road safety</a>
-        <span class="venue">Transportation Research Record · 2025</span>
-      </li>
-      <li>
-        <span class="t">Cooperative longevity of interaction model for addressing paused handoff problem in smart city intelligent transportation systems</span>
-        <span class="venue">PLOS ONE, 20(3), e0318997 · 2025</span>
-      </li>
-      <li>
-        <span class="t">Federated learning-based predictive traffic management using a contained privacy-preserving scheme for autonomous vehicles</span>
-        <span class="venue">Sensors, 25(4), 1116 · 2025</span>
-      </li>
-      <li>
-        <a href="https://doi.org/10.1002/tjo3.12032" target="_blank" rel="noopener">The future of transportation: blockchain-powered solutions</a>
-        <span class="venue">Transportation Journal, e12032 · 2025</span>
-      </li>
-      <li>
-        <span class="t">Optimizing energy supply for full electric vehicles in smart cities: a comprehensive mobility network model</span>
-        <span class="venue">World Electric Vehicle Journal, 16(1), 5 · 2024</span>
-      </li>
-      <li>
-        <span class="t">Accessibility enhancement of mass transit system through GIS-based modeling of feeder routes</span>
-        <span class="venue">Journal of Urban Management, 13(4), 755–771 · 2024</span>
-      </li>
-      <li>
-        <span class="t">Comparing fatal crash risk factors by age and crash type using machine learning techniques</span>
-        <span class="venue">PLOS ONE, 19(5), e0302171 · 2024</span>
-      </li>
-      <li>
-        <span class="t">Safety and mobility performance comparison of two-plus-one and two-lane two-way roads: a simulation study</span>
-        <span class="venue">Applied Sciences, 14(11), 4352 · 2024</span>
-      </li>
-      <li>
-        <a href="https://www.mdpi.com/2071-1050/15/14/11429" target="_blank" rel="noopener">Development of artificial-intelligence-based safety performance measures for urban roundabouts</a>
-        <span class="venue">Sustainability, 15(14), 11429 · 2023</span>
-      </li>
-      <li>
-        <a href="https://www.mdpi.com/2071-1050/15/4/3158" target="_blank" rel="noopener">Development of smart mobility infrastructure in Saudi Arabia: a benchmarking approach</a>
-        <span class="venue">Sustainability, 15(4), 3158 · 2023</span>
-      </li>
-      <li>
-        <span class="t">A systematic literature review of autonomous and connected vehicles in traffic management</span>
-        <span class="venue">Applied Sciences, 13(3), 1789 · 2023</span>
-      </li>
-    </ul>
-    <p class="more">
+  <section id="pubs">
+    <div class="colhead">
+      <h2><span class="ar">مختارات من المنشورات</span><span class="en">Selected Publications</span></h2>
       <a href="https://scholar.google.com/citations?user=vGZQI8gAAAAJ" target="_blank" rel="noopener">
-        <span class="ar">القائمة الكاملة على Google Scholar ←</span>
-        <span class="en">Full list on Google Scholar →</span>
+        <span class="ar">القائمة الكاملة</span><span class="en">Full list</span>
       </a>
-    </p>
+    </div>
+    <div class="pubs">
+      <a class="row" href="https://doi.org/10.1371/journal.pone.0339207" target="_blank" rel="noopener">
+        <span class="yr">2026</span>
+        <span>
+          <span class="t">Adaptive traffic signal control using deep reinforcement learning: toward smarter and safer urban mobility</span>
+          <span class="venue">PLOS ONE 21(3), e0339207</span>
+        </span>
+      </a>
+      <a class="row" href="https://doi.org/10.3390/su17209210" target="_blank" rel="noopener">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">MRI-Copula: a hybrid copula and machine learning framework for multivariate risk indexing in urban traffic safety</span>
+          <span class="venue">Sustainability 17(20), 9210</span>
+        </span>
+      </a>
+      <a class="row" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12443991/" target="_blank" rel="noopener">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">Comparative evaluation of deep learning and traditional models for predicting traffic accident severity in Saudi Arabia</span>
+          <span class="venue">Scientific Reports 15, 32568</span>
+        </span>
+      </a>
+      <div class="row">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">Deep learning-based predictive models for real-time accident prevention in autonomous vehicle networks</span>
+          <span class="venue">Scientific Reports 15, 20844</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">AI on the road: a review of technologies enhancing urban traffic safety and efficiency</span>
+          <span class="venue">Promet, Traffic &amp; Transportation 37(5), 1179</span>
+        </span>
+      </div>
+      <a class="row" href="https://doi.org/10.3141/03611981251337460" target="_blank" rel="noopener">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">Predicting traffic crash severity in Jeddah using machine learning techniques</span>
+          <span class="venue">Transportation Research Record</span>
+        </span>
+      </a>
+      <div class="row">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">Federated learning-based predictive traffic management with a privacy-preserving scheme for autonomous vehicles</span>
+          <span class="venue">Sensors 25(4), 1116</span>
+        </span>
+      </div>
+      <a class="row" href="https://doi.org/10.1002/tjo3.12032" target="_blank" rel="noopener">
+        <span class="yr">2025</span>
+        <span>
+          <span class="t">The future of transportation: blockchain-powered solutions</span>
+          <span class="venue">Transportation Journal, e12032</span>
+        </span>
+      </a>
+      <div class="row">
+        <span class="yr">2024</span>
+        <span>
+          <span class="t">Optimizing energy supply for full electric vehicles in smart cities: a comprehensive mobility network model</span>
+          <span class="venue">World Electric Vehicle Journal 16(1), 5</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="yr">2024</span>
+        <span>
+          <span class="t">Accessibility enhancement of mass transit system through GIS-based modeling of feeder routes</span>
+          <span class="venue">Journal of Urban Management 13(4), 755</span>
+        </span>
+      </div>
+      <div class="row">
+        <span class="yr">2024</span>
+        <span>
+          <span class="t">Comparing fatal crash risk factors by age and crash type using machine learning techniques</span>
+          <span class="venue">PLOS ONE 19(5), e0302171</span>
+        </span>
+      </div>
+      <a class="row" href="https://www.mdpi.com/2071-1050/15/14/11429" target="_blank" rel="noopener">
+        <span class="yr">2023</span>
+        <span>
+          <span class="t">Development of artificial-intelligence-based safety performance measures for urban roundabouts</span>
+          <span class="venue">Sustainability 15(14), 11429</span>
+        </span>
+      </a>
+      <a class="row" href="https://www.mdpi.com/2071-1050/15/4/3158" target="_blank" rel="noopener">
+        <span class="yr">2023</span>
+        <span>
+          <span class="t">Development of smart mobility infrastructure in Saudi Arabia: a benchmarking approach</span>
+          <span class="venue">Sustainability 15(4), 3158</span>
+        </span>
+      </a>
+      <div class="row">
+        <span class="yr">2023</span>
+        <span>
+          <span class="t">A systematic literature review of autonomous and connected vehicles in traffic management</span>
+          <span class="venue">Applied Sciences 13(3), 1789</span>
+        </span>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2><span class="ar">المؤتمرات والخدمة العلمية</span><span class="en">Conferences &amp; Academic Service</span></h2>
+    <h2><span class="ar">المؤتمرات والخدمة العلمية</span><span class="en">Conferences &amp; Service</span></h2>
     <ul class="plain">
       <li>
-        <span class="ar">عضو اللجنة العلمية (Technical Program Committee) — المؤتمر الدولي الثامن لأنظمة النقل والمرور الذكية (ICITT 2024)، فلورنسا، إيطاليا</span>
-        <span class="en">Technical Program Committee member — 8th International Conference on Intelligent Traffic and Transportation (ICITT 2024), Florence, Italy</span>
+        <span class="ar">عضو اللجنة العلمية (Technical Program Committee)، المؤتمر الدولي الثامن لأنظمة النقل والمرور الذكية (ICITT 2024)، فلورنسا، إيطاليا.</span>
+        <span class="en">Technical Program Committee member, 8th International Conference on Intelligent Traffic and Transportation (ICITT 2024), Florence, Italy.</span>
       </li>
       <li>
-        <span class="ar">ورقة مؤتمر: النقل المستدام وتطوير البنية التحتية الذكية في المملكة — أثر رؤية 2030 ودمج الطاقة المتجددة (ICITT 2024، ص 90–101)</span>
-        <span class="en">Conference paper: Sustainable transportation and intelligent infrastructure development in Saudi Arabia — the impact of Vision 2030 and renewable energy integration (ICITT 2024, pp. 90–101)</span>
+        <span class="ar">ورقة مؤتمر: النقل المستدام وتطوير البنية التحتية الذكية في المملكة، أثر رؤية 2030 ودمج الطاقة المتجددة (ICITT 2024، ص 90 إلى 101).</span>
+        <span class="en">Conference paper: Sustainable transportation and intelligent infrastructure development in Saudi Arabia, the impact of Vision 2030 and renewable energy integration (ICITT 2024, pp. 90 to 101).</span>
       </li>
       <li>
-        <span class="ar">محكّم علمي في مجلات دولية محكّمة، منها Sustainability و IEEE Access و Scientific Reports و PLOS ONE و Applied Sciences (MDPI)</span>
-        <span class="en">Peer reviewer for international journals including Sustainability, IEEE Access, Scientific Reports, PLOS ONE, and Applied Sciences (MDPI)</span>
+        <span class="ar">محكّم علمي في مجلات دولية محكّمة، منها Sustainability و IEEE Access و Scientific Reports و PLOS ONE و Applied Sciences.</span>
+        <span class="en">Peer reviewer for international journals including Sustainability, IEEE Access, Scientific Reports, PLOS ONE, and Applied Sciences.</span>
       </li>
     </ul>
   </section>
 
   <section>
-    <h2><span class="ar">المهارات التقنية</span><span class="en">Technical Skills</span></h2>
-    <div class="skills">
+    <h2><span class="ar">الأدوات واللغات</span><span class="en">Tools &amp; Languages</span></h2>
+    <dl class="skills">
       <div>
-        <b><span class="ar">المحاكاة والنمذجة:</span><span class="en">Simulation &amp; modelling:</span></b>
-        <span>VISSIM, SUMO, Synchro</span>
+        <dt><span class="ar">المحاكاة والنمذجة</span><span class="en">Simulation &amp; modelling</span></dt>
+        <dd>VISSIM, SUMO, Synchro</dd>
       </div>
       <div>
-        <b><span class="ar">تحليل البيانات:</span><span class="en">Data analysis:</span></b>
-        <span class="ar">Python، R، MATLAB — تعلم الآلة، التعلم العميق، التعلم المعزز، التعلم الاتحادي، التحليل الإحصائي</span>
-        <span class="en">Python, R, MATLAB — machine learning, deep learning, reinforcement and federated learning, statistical analysis</span>
+        <dt><span class="ar">تحليل البيانات</span><span class="en">Data analysis</span></dt>
+        <dd>
+          <span class="ar">Python، R، MATLAB. تعلم الآلة، التعلم العميق، التعلم المعزز والاتحادي، التحليل الإحصائي</span>
+          <span class="en">Python, R, MATLAB. Machine learning, deep learning, reinforcement and federated learning, statistical analysis</span>
+        </dd>
       </div>
       <div>
-        <b><span class="ar">نظم المعلومات الجغرافية:</span><span class="en">GIS:</span></b>
-        <span class="ar">ArcGIS و QGIS — نمذجة المسارات المغذية، تحليل إمكانية الوصول، رسم خرائط البنية التحتية</span>
-        <span class="en">ArcGIS and QGIS — feeder route modelling, accessibility analysis, infrastructure mapping</span>
+        <dt><span class="ar">نظم المعلومات الجغرافية</span><span class="en">GIS</span></dt>
+        <dd>
+          <span class="ar">ArcGIS و QGIS. نمذجة المسارات المغذية، تحليل إمكانية الوصول، رسم خرائط البنية التحتية</span>
+          <span class="en">ArcGIS and QGIS. Feeder route modelling, accessibility analysis, infrastructure mapping</span>
+        </dd>
       </div>
       <div>
-        <b><span class="ar">اللغات:</span><span class="en">Languages:</span></b>
-        <span class="ar">العربية (اللغة الأم) · الإنجليزية (إجادة تامة)</span>
-        <span class="en">Arabic (native) · English (full professional proficiency)</span>
+        <dt><span class="ar">اللغات</span><span class="en">Languages</span></dt>
+        <dd>
+          <span class="ar">العربية (اللغة الأم)، الإنجليزية (إجادة تامة)</span>
+          <span class="en">Arabic (native), English (full professional proficiency)</span>
+        </dd>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2><span class="ar">تواصل</span><span class="en">Contact</span></h2>
-    <div class="contact">
-      <span>
-        <span class="ar">البريد الإلكتروني: </span><span class="en">Email: </span>
-        <a href="mailto:fkalanazi@ju.edu.sa">fkalanazi@ju.edu.sa</a>
-      </span>
-      <span class="ar">قسم الهندسة المدنية، كلية الهندسة، جامعة الجوف، سكاكا 72351، المملكة العربية السعودية</span>
-      <span class="en">Department of Civil Engineering, College of Engineering, Jouf University, Sakaka 72351, Saudi Arabia</span>
-      <span>
-        <a href="https://scholar.google.com/citations?user=vGZQI8gAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        ·
-        <a href="https://www.researchgate.net/profile/Fayez-Alanazi" target="_blank" rel="noopener">ResearchGate</a>
-        ·
-        <a href="https://www.linkedin.com/in/fayez-alanazi-b42775157/" target="_blank" rel="noopener">LinkedIn</a>
-      </span>
-    </div>
+    </dl>
   </section>
 </main>
 
-<footer class="wrap">
-  <span class="ar">© 2026 فايز بن خلف العنزي — جميع الحقوق محفوظة.</span>
-  <span class="en">© 2026 Fayez K. Alanazi — All rights reserved.</span>
+<div class="band" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="lbl">
+        <span class="ar">للتعاون البحثي والاستشارات</span>
+        <span class="en">For research collaboration and consulting</span>
+      </div>
+      <a class="mail" href="mailto:fkalanazi@ju.edu.sa">fkalanazi@ju.edu.sa</a>
+    </div>
+    <div class="profiles">
+      <a href="https://scholar.google.com/citations?user=vGZQI8gAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://www.researchgate.net/profile/Fayez-Alanazi" target="_blank" rel="noopener">ResearchGate</a>
+      <a href="https://www.linkedin.com/in/fayez-alanazi-b42775157/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="ar">© 2026 فايز بن خلف العنزي</span>
+    <span class="en">© 2026 Fayez K. Alanazi</span>
+    <span class="ar">قسم الهندسة المدنية، جامعة الجوف، سكاكا</span>
+    <span class="en">Department of Civil Engineering, Jouf University, Sakaka</span>
+  </div>
 </footer>
 
 <script>
